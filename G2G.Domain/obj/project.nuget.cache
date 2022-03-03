@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ebyEBtWo+Fr0ZXCrzQ8kGoD3fIpJYpnx/KNRttlaYPbApiPkuEx2NhycCMmvql6b95cBGA4FGfBX14/5p3WOWQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\anton\\OneDrive - ViaUC\\Semester 6 and 7\\PCL1\\Exercises\\PCL1.G2G\\G2G.Domain\\G2G.Domain.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\anton\\.nuget\\packages\\fsharp.core\\6.0.1\\fsharp.core.6.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
