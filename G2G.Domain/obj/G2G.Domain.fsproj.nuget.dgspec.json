@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anton\\OneDrive - ViaUC\\Semester 6 and 7\\PCL1\\Exercises\\PCL1.G2G\\G2G.Domain\\G2G.Domain.fsproj": {}
+    "C:\\Users\\Jannik\\Desktop\\F#\\Mini-Project\\PCL1.G2G\\G2G.Domain\\G2G.Domain.fsproj": {}
   },
   "projects": {
-    "C:\\Users\\anton\\OneDrive - ViaUC\\Semester 6 and 7\\PCL1\\Exercises\\PCL1.G2G\\G2G.Domain\\G2G.Domain.fsproj": {
+    "C:\\Users\\Jannik\\Desktop\\F#\\Mini-Project\\PCL1.G2G\\G2G.Domain\\G2G.Domain.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anton\\OneDrive - ViaUC\\Semester 6 and 7\\PCL1\\Exercises\\PCL1.G2G\\G2G.Domain\\G2G.Domain.fsproj",
+        "projectUniqueName": "C:\\Users\\Jannik\\Desktop\\F#\\Mini-Project\\PCL1.G2G\\G2G.Domain\\G2G.Domain.fsproj",
         "projectName": "G2G.Domain",
-        "projectPath": "C:\\Users\\anton\\OneDrive - ViaUC\\Semester 6 and 7\\PCL1\\Exercises\\PCL1.G2G\\G2G.Domain\\G2G.Domain.fsproj",
-        "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anton\\OneDrive - ViaUC\\Semester 6 and 7\\PCL1\\Exercises\\PCL1.G2G\\G2G.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Jannik\\Desktop\\F#\\Mini-Project\\PCL1.G2G\\G2G.Domain\\G2G.Domain.fsproj",
+        "packagesPath": "C:\\Users\\Jannik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jannik\\Desktop\\F#\\Mini-Project\\PCL1.G2G\\G2G.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jannik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,7 +38,7 @@
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[6.0.1, )",
+              "version": "[5.0.0, )",
               "generatePathProperty": true
             }
           },
@@ -57,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

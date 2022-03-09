@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ebyEBtWo+Fr0ZXCrzQ8kGoD3fIpJYpnx/KNRttlaYPbApiPkuEx2NhycCMmvql6b95cBGA4FGfBX14/5p3WOWQ==",
+  "dgSpecHash": "GdnUBnYKeWuUtaRhqEc6ltofn8+9nqcJptit8uB2c3hoaloZNd7IEdnB3bN5DUHRctbbusgthjE00gyLtaok8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\anton\\OneDrive - ViaUC\\Semester 6 and 7\\PCL1\\Exercises\\PCL1.G2G\\G2G.Domain\\G2G.Domain.fsproj",
+  "projectFilePath": "C:\\Users\\Jannik\\Desktop\\F#\\Mini-Project\\PCL1.G2G\\G2G.Domain\\G2G.Domain.fsproj",
   "expectedPackageFiles": [
-    "C:\\Users\\anton\\.nuget\\packages\\fsharp.core\\6.0.1\\fsharp.core.6.0.1.nupkg.sha512"
+    "C:\\Users\\Jannik\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
