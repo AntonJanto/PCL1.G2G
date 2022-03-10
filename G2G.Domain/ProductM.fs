@@ -1,10 +1,13 @@
-﻿module FirstSprint
+﻿module ProductM
+
 type CoffeeType = Americano | Latte | Cappucino | Espresso
 type Teatype = Green | Herbal | Wulong | Camellia
 type JuiceType = Apple | Orange | Mixed 
 type SodaType = Cola | Fanta | Sprite 
 
 type Size = Small | Medium | Large
+
+
 type CoffeeR = {size:Size; coffeeType:CoffeeType}
 type TeaR = {size:Size; teaType:Teatype}
 type JuiceR = {size:Size; teaType: Teatype}
