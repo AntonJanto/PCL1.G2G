@@ -6,7 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="FirstSprint.fs" />
+    <Compile Include="OrderM.fs" />
+    <Compile Include="ProductM.fs" />
   </ItemGroup>
 
 </Project>
