@@ -6,8 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="OrderM.fs" />
+    <Compile Include="RunAll.fsx" />
     <Compile Include="ProductM.fs" />
+    <Compile Include="PaymentM.fs" />
+    <Compile Include="OrderM.fs" />
   </ItemGroup>
 
 </Project>
