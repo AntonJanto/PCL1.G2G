@@ -55,12 +55,12 @@ let priceFruit (fruit:FruitBase) =
     | Mango -> 7.0
 
 
-type Product = Drink of DrinkBase | Fruit of FruitBase
+type Product = Drink of DrinkBase*int | Fruit of FruitBase*int
 
 let calculatePrice(product:Product) = 
     match product with
-    | Drink(drink) -> priceDrink(drink)
-    | Fruit(fruit) -> priceFruit(fruit)
+    | Drink(drink, quantity) -> priceDrink(drink) * (float)quantity
+    | Fruit(fruit, quantity) -> priceFruit(fruit) * (float)quantity
 
 let calculatePriceTotal(products: Product List) = 
     let rec calcTotalRec pr acc = 
