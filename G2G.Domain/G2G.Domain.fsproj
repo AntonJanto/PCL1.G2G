@@ -10,6 +10,7 @@
     <Compile Include="ProductM.fs" />
     <Compile Include="PaymentM.fs" />
     <Compile Include="OrderM.fs" />
+    <Compile Include="TestM.fs" />
   </ItemGroup>
 
 </Project>
