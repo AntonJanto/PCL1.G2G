@@ -17,14 +17,16 @@ let payOrder (order:OrderR) =
     let total = orderProduct order
     printPayment order.payment total
 
-type OrderProductMsg = | Order of OrderR | LeaveAComment of string
+type OrderProductMsg = 
+    | Order of OrderR 
+    | LeaveAComment of string
 
 let gtgAgent = MailboxProcessor<OrderProductMsg>.Start(fun inbox -> 
-        let rec orderProductMessage = async{
-            let! msg = inbox.Receive()
-            match msg with 
-            | Order(orderR) -> payOrder orderR
-            | LeaveAComment(leaveAComment) -> printfn"%s" leaveAComment
-            return! orderProductMessage
-            }
-        orderProductMessage)
+    let rec orderProductMessage = async{
+        let! msg = inbox.Receive()
+        match msg with 
+        | Order(orderR) -> payOrder orderR
+        | LeaveAComment(leaveAComment) -> printfn"%s" leaveAComment
+        return! orderProductMessage
+        }
+    orderProductMessage)

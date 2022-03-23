@@ -56,7 +56,9 @@ let priceFruit (fruit:FruitBase) =
     | Mango -> 7.0
 
 
-type Product = Drink of DrinkBase*int | Fruit of FruitBase*int
+type Product = 
+    | Drink of DrinkBase * qty: int 
+    | Fruit of FruitBase * qty: int 
 
 let calculatePrice(product:Product) = 
     match product with
@@ -70,14 +72,17 @@ let calculatePriceTotal(products: Product List) =
         | hd::tl -> (calculatePrice hd) + acc |> calcTotalRec tl
     calcTotalRec products 0.0
 
+//PAYMENT
+//PAYMENT
+//PAYMENT
+open System
 
-//PAYMENT
-//PAYMENT
-//PAYMENT
 type CashR = { amount: float }
 type CreditCardR = { amount: float; bankAccount:string }
-    
+
 type Payment = Cash of CashR | CreditCard of CreditCardR
+
+let gtgVAT(percentage : int)(price : float) = price * (1.0 + Convert.ToDouble(percentage)/100.0)  
 
 
 //ORDER
@@ -95,10 +100,25 @@ let printPayment payment total =
     | CreditCard(ccR) ->
         printfn "The order total %f has been fully paid using a credit card from account %s." total ccR.bankAccount
 
+let orderProduct (order:OrderR) = calculatePriceTotal order.products |> gtgVAT 25
+
 let payOrder (order:OrderR) = 
-    let total = calculatePriceTotal order.products
+    let total = orderProduct order
     printPayment order.payment total
 
+type OrderProductMsg = 
+    | Order of OrderR 
+    | LeaveAComment of string
+
+let gtgAgent = MailboxProcessor<OrderProductMsg>.Start(fun inbox -> 
+    let rec orderProductMessage = async{
+        let! msg = inbox.Receive()
+        match msg with 
+        | Order(orderR) -> payOrder orderR
+        | LeaveAComment(leaveAComment) -> printfn"%s" leaveAComment
+        return! orderProductMessage
+        }
+    orderProductMessage)
 
 //RUNNING
 //RUNNING
@@ -120,4 +140,12 @@ let payment = Payment.CreditCard({ bankAccount = "DK00556699"; amount = 0.0})
 let order = { products = products; payment = payment }
 
 payOrder order
+
+let orderMsg = OrderProductMsg.Order(order)
+gtgAgent.Post(orderMsg)
+
+let comment = "I am leaving a comment"
+let commentMsg = OrderProductMsg.LeaveAComment(comment)
+gtgAgent.Post(commentMsg)
+
     

@@ -18,3 +18,10 @@ let payment = Payment.CreditCard({ bankAccount = "DK00556699"; amount = 0.0})
 let order = { products = products; payment = payment }
 
 payOrder order
+
+let orderMsg = OrderProductMsg.Order(order)
+gtgAgent.Post(orderMsg)
+
+let comment = "I am leaving a comment"
+let commentMsg = OrderProductMsg.LeaveAComment(comment)
+gtgAgent.Post(commentMsg)
