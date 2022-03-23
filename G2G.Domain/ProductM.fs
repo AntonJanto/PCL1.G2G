@@ -55,7 +55,7 @@ let priceFruit (fruit:FruitBase) =
     | Mango -> 7.0
 
 
-type Product = Drink of DrinkBase*int | Fruit of FruitBase*int
+type Product = Drink of DrinkBase*int | Fruit of FruitBase*int 
 
 let calculatePrice(product:Product) = 
     match product with
