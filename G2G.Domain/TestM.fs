@@ -11,6 +11,7 @@ let product4 = Product.Drink(DrinkBase.Soda({ size = Size.Small; sodaType = Soda
 let product5 = Product.Drink(DrinkBase.Juice({ size = Size.Large; juiceType = JuiceType.Mixed}), 10)
 let product6 = Product.Fruit(FruitBase.Apple, 5)
 let product7 = Product.Fruit(FruitBase.Mango, 1)
+let product8 = Product.Drink(DrinkBase.Coffee({size = Size.Medium; coffeeType = CoffeeType.Cappucino}), 25)
 
 let products = [ product1 ; product2 ; product3 ; product4 ; product5 ; product6 ; product7 ]
 let payment = Payment.CreditCard({ bankAccount = "DK00556699"; amount = 0.0})

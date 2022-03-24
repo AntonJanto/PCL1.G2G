@@ -11,7 +11,7 @@ let printPayment payment total =
     | CreditCard(ccR) ->
         printfn "The order total %f has been fully paid using a credit card from account %s." total ccR.bankAccount
 
-let orderTotal (order:OrderR) = calculatePriceTotal order.products |> gtgVAT 25
+let orderTotal (order:OrderR) = calculatePriceTotal order.products
 
 let payOrder (order:OrderR) = 
     let total = orderTotal order

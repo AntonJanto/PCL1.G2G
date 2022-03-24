@@ -1,4 +1,7 @@
-﻿module ProductM 
+﻿module ProductM
+open System
+
+let gtgVAT(percentage : int)(price : float) = price * (1.0 + Convert.ToDouble(percentage)/100.0) 
 
 type Size = Small | Medium | Large
 
@@ -23,13 +26,13 @@ let priceSizeCoffee (coffe : CoffeeR) =
 let priceSizeTea (tea : TeaR) = 
     match tea.size with 
     | Small -> 12.0
-    | Medium -> 17.0 
+    | Medium -> 17.0
     | Large -> 20.0
     
 let priceSizeJuice (juice : JuiceR) = 
     match juice.size with 
     | Small -> 5.0
-    | Medium -> 10.0 
+    | Medium -> 10.0
     | Large -> 15.0
     
 let priceSizeSoda (soda : SodaR) = 
@@ -38,9 +41,10 @@ let priceSizeSoda (soda : SodaR) =
     | Medium -> 18.0
     | Large -> 21.0
 
+
 let priceDrink (drink : DrinkBase) = 
     match drink with 
-    | Coffee(coffeeR) -> priceSizeCoffee(coffeeR)
+    | Coffee(coffeeR) -> priceSizeCoffee(coffeeR) |> gtgVAT 25
     | Tea(teaR) -> priceSizeTea(teaR)
     | Juice(juiceR) -> priceSizeJuice(juiceR)
     | Soda(sodaR) -> priceSizeSoda(sodaR)
