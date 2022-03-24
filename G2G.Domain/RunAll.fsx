@@ -134,7 +134,7 @@ let product5 = Product.Drink(DrinkBase.Juice({ size = Size.Large; juiceType = Ju
 let product6 = Product.Fruit(FruitBase.Apple, 5)
 let product7 = Product.Fruit(FruitBase.Mango, 1)
 
-let products = product1 :: product2 :: product3 :: product4 :: product5 :: product6 :: product7 :: []
+let products = [ product1 ; product2 ; product3 ; product4 ; product5 ; product6 ; product7 ]
 let payment = Payment.CreditCard({ bankAccount = "DK00556699"; amount = 0.0})
 
 let order = { products = products; payment = payment }
